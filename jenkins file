@@ -6,6 +6,11 @@ pipeline{
        git changelog: false, poll: false, url: 'https://github.com/dstar55/docker-hello-world-spring-boot.git'
        }
       }
+      stage('stage:maven build'){
+      steps {
+      sh 'mvn  clean install'
+      }
+     }
     }
    }
     
